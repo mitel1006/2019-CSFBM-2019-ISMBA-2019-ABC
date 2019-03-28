@@ -1,0 +1,67 @@
+/**************************************************************
+
+	Image Menu
+	v 2.2
+
+**************************************************************/
+
+
+.imageMenu {
+	position: relative;
+	width: 770px;
+	height: 299px;
+	overflow: hidden;
+}
+
+
+
+.imageMenu ul {
+	list-style: none;
+	margin: 0px;
+	display: block;
+	height: 299px;
+	width: 770px;
+	
+	}
+
+.imageMenu ul li {
+	float: left;
+}
+
+.imageMenu ul li a {
+	background:#FFFFFF none repeat scroll 0%;
+	border-right: 2px solid #fff;
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	width:145px;
+	height: 299px;
+	text-indent: -1000px;
+}
+
+.imageMenu ul li.landscapes a {
+	background: url(images/1.jpg) repeat scroll 0%;
+}
+
+.imageMenu ul li.people a {
+	background: url(images/2.jpg) repeat scroll 0%;
+}
+
+.imageMenu ul li.nature a {
+	background: url(images/3.jpg) repeat scroll 0%;
+}
+
+.imageMenu ul li.urban a {
+	background: url(images/4.jpg) repeat scroll 0%;
+}
+
+.imageMenu ul li.abstract a {
+	background: url(images/5.jpg) repeat scroll 0%;
+	
+}
+
+.clear {
+	clear: both;
+}
+
+/*************************************************************/

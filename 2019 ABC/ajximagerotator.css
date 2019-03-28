@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+ Ajatix Image/Banner Rotator
+ Copyright (C) 2011-2014 Ajatix. All rights reserved.
+ http://www.ajatix.com
+*/
+.AJXIRDeDOFBD {position:relative;height:auto;max-width:900px;;min-width:200px;width:100%;background-color:#ffffff; margin-top:20px;}
+.AJXIRDeDOFBD ul {border:0px;margin:0px;padding:0px;}
+.AJXIRDeDOFBD li {border:0px;margin:0px;padding:0px;list-style-type:none;}
+.AJXIRDeDOFBDpics {min-width:200px;max-width:900px;width:100%;overflow:hidden;position:relative;left:0px;}
+.AJXIRDeDOFBDimg {width:100%;height:auto;border:none;display:block;}
+.AJXIRDeDOFBDcurdiv {position:absolute;top:0;left:0;}
+.AJXIRDeDOFBDcurimg {display:block;border:none;}
+.AJXIRDeDOFBDcura {width:100%;display:block;}
+.AJXIRDeDOFBDforwardpic {max-width:960px;min-width:200px;width:100%;height:100%;overflow:hidden;position:absolute;top:0px;left:0px;}
+.AJXIRDeDOFBDslidediv {position:absolute;top:0px;}
+.AJXIRDeDOFBDul {position:relative;left:0px;top:0px;}
+.AJXIRDeDOFBDli {max-width:900px;min-width:200px;width:100%;position:relative;}
+.AJXIRDeDOFBD .AJXIRDeDOFBDbtnwrap {position:absolute;left:0px;width: 100%;overflow:hidden;height:26px;cursor:pointer;z-index:1;bottom:5px;}
+.AJXIRDeDOFBD .AJXIRDeDOFBDbtn {position:absolute;top:0px;left:5px;height:26px;overflow:hidden;}
+.AJXIRDeDOFBD .AJXIRDeDOFBDbtn ul li {position:relative;cursor:pointer;text-align:center;float:left;margin-top:4px;margin-bottom:0px;margin-left:4px;width:22px;height:22px;font-size:0px;background:no-repeat transparent url(ajximagerotator_files/nbbtn.png);}
+.AJXIRDeDOFBD .AJXIRDeDOFBDbtn ul li.current {background:no-repeat transparent url(ajximagerotator_files/nbbtnmo.png);}
+.AJXIRDeDOFBD .AJXIRDeDOFBDleft {height:26px;position:relative;float:left;cursor:pointer;width:15px;background:center no-repeat url(ajximagerotator_files/nbleft.gif);}
+.AJXIRDeDOFBD .AJXIRDeDOFBDright {height:26px;position:relative;float:left;cursor:pointer;width:15px;background:center no-repeat url(ajximagerotator_files/nbright.gif);}
+.AJXIRDeDOFBD .AJXIRDeDOFBDleftd {cursor:default;background:center no-repeat url(ajximagerotator_files/nbleftdis.gif);}
+.AJXIRDeDOFBD .AJXIRDeDOFBDrightd {cursor:default;background:center no-repeat url(ajximagerotator_files/nbrightdis.gif);}
+.AJXIRDeDOFBD .AJXIRDeDOFBDright div, .AJXIRDeDOFBD .AJXIRDeDOFBDleft div {height:22px;margin-top:4px;margin-bottom:0px;cursor:pointer;text-align:center;}
+.AJXIRDeDOFBD .AJXIRDeDOFBDrightd div, .AJXIRDeDOFBD .AJXIRDeDOFBDleftd div {cursor:default;}
+.AJXIRDeDOFBD .AJXIRDeDOFBDnavpics {height:26px;position:relative;float:left;overflow:hidden;margin-right:4px;}
+.AJXIRDeDOFBDlihide {display:none;}
+.AJXIRDeDOFBDclearfix:after {content:" ";visibility:hidden;display:block;height:0;clear:both;}

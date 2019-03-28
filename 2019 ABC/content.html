@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>2017 ACRES</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="bookmark" href="favicon.ico"/>
+</head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+$(function(){
+	var $block = $('#abgne_fade_pic'), 
+		$ad = $block.find('.ad'),
+		showIndex = 0,			// 預設要先顯示那一張
+		fadeOutSpeed = 2000,	// 淡出的速度
+		fadeInSpeed = 2000,		// 淡入的速度
+		defaultZ = 10,			// 預設的 z-index
+		isHover = false,
+		timer, speed = 1000;	// 計時器及輪播切換的速度
+ 
+	// 先把其它圖片的變成透明
+	$ad.css({
+		opacity: 0,
+		zIndex: defaultZ - 1
+	}).eq(showIndex).css({
+		opacity: 1,
+		zIndex: defaultZ
+	});
+ 
+	// 組出右下的按鈕
+	var str = '';
+	for(var i=0;i<$ad.length;i++){
+		str += '<a href="#">' + (i + 1) + '</a>';
+	}
+	var $controlA = $('#abgne_fade_pic').append($('<div class="control">' + str + '</div>').css('zIndex', defaultZ + 1)).find('.control a');
+ 
+	// 當按鈕被點選時
+	// 若要變成滑鼠滑入來切換時, 可以把 click 換成 mouseover
+	$controlA.click(function(){
+		// 取得目前點擊的號碼
+		showIndex = $(this).text() * 1 - 1;
+ 
+		// 顯示相對應的區域並把其它區域變成透明
+		$ad.eq(showIndex).stop().fadeTo(fadeInSpeed, 1, function(){
+			if(!isHover){
+				// 啟動計時器
+				timer = setTimeout(autoClick, speed + fadeInSpeed);
+			}
+		}).css('zIndex', defaultZ).siblings('a').stop().fadeTo(fadeOutSpeed, 0).css('zIndex', defaultZ - 1);
+		// 讓 a 加上 .on
+		$(this).addClass('on').siblings().removeClass('on');
+ 
+		return false;
+	}).focus(function(){
+		$(this).blur();
+	}).eq(showIndex).addClass('on');
+ 
+	$ad.hover(function(){
+		isHover = true;
+		// 停止計時器
+		clearTimeout(timer);
+	}, function(){
+		isHover = false;
+		// 啟動計時器
+		timer = setTimeout(autoClick, speed);
+	})
+ 
+	// 自動點擊下一個
+	function autoClick(){
+		if(isHover) return;
+		showIndex = (showIndex + 1) % $controlA.length;
+		$controlA.eq(showIndex).click();
+	}
+ 
+	// 啟動計時器
+	timer = setTimeout(autoClick, speed);
+});
+
+})
+
+</script>
+
+<link rel="stylesheet" href="ajximagerotator.css" type="text/css" />
+<script src="ajximagerotator.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ajxmenu.css" type="text/css" />
+<script src="ajxmenu.js" type="text/javascript"></script>
+
+<body>
+
+
+
+
+<div class="main">
+<div class="header">
+
+<div class="center">
+
+
+</div>
+
+
+</div>
+
+<div class="menu">
+	<div class="center">
+		<div class="AJXCSSMenuWeOfEYB"> <!-- AJXFILE:ajxmenu.css -->
+			<ul>
+			  <li class=""><a class="" href="#">Home</a></li>
+			  <li class=""><a style="width:160px" href="#">About 2019 ABC </a></li>
+			  <li class=""><a style="width:140px" href="#">Call for Papers</a></li>
+			  <li class=""><a style="width:140px"class="" href="#">Registration</a></li>
+			  <li class=""><a style="width:140px"class="" href="#">Information</a></li>
+		<!-- <li class="tfirst tsub">
+			 <a class="ajxsub" href="#">Information</a>
+			<ul class="sub-menu">
+			<li><a href="#" target="_top" >Conference Venue</a></li>
+			<li><a href="#" target="_top" >Transportation</a></li>
+			<li><a href="#" target="_top" >Accommodation</a></li>
+			<li><a href="#" target="_top" >Optional Tour</a></li>
+			<li><a href="#" target="_top" >About Taiwan</a></li>
+			<li><a href="#" target="_top" >Taipei Sightseeing</a></li>
+
+
+			</ul>           
+		</li>-->
+			</ul>
+		 </div>
+	</div>
+</div>
+
+
+
+<div class="center">
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="center">
+
+<div class="center">
+	<div class="welcome" style="width: 688px; float: left;">
+	<table class="news_table">
+	<thead>
+	<tr><th><span class="blue_a">WELCOME</span> MESSAGE</th></tr></thead>
+	<tbody>
+	<tr>
+	<td>
+
+
+	<p class="left">
+	On behalf of the 19th Asian BioCeramics Symposium  (2019ABC) and 2019 International Symposium of Materials for Biomedical Application (2019 ISMBA), we would like to cordially invite you to participate in the forthcoming symposium which will be held on December 9-11, 2019, in Chang Gung University, Tao-Yuan, Taiwan, ROC. 
+	<br/><br/>
+	The aims of the symposium are to explore the materials technology for biomedical application that includes Nano-Technology; Biotechnology; Supercritical Technology; 3D Printing Technology; Biomedical Surface Engineering; Biomaterials; Nature Polymer; Polymer for Biomedical Application, Metal for Biomedical Application, Ceramic Materials for Biomedical Application, Tissue Engineering; Regenerative Medicine; Nanomedicine; Drug and Gene Delivery; Biosensors and Bioelectronics. 
+
+	We believe that the symposium will give you a good opportunity for fruitful harvest. Moreover, it will be a forum for interdisciplinary discussion between scientists, bioengineers, clinicians, regulatory officials and so on. </p>
+
+	<p>Sincerely Yours </p>
+
+
+	<p>
+	<br/>
+	<b>Prof. Jen-Ming Yang </b><br/><br/>
+	General Chair, 2019ABC and 2019ISMBA<br/>
+	Department of Chemical and Materials Engineering<br/>
+	Chang Gung University<b/>
+	</p>
+
+
+	</td>
+	</tr>
+	</tbody>
+	</table>
+
+
+	</div>
+	<div class="important_date">
+	<table class="news_table">
+	<thead>
+	<tr valign="top"><th colspan="2"><span class="blue_a">IMPORTANT</span> DATES</th></tr></thead>
+	<tbody>
+	<tr>
+	<td>
+	<div class="frame2">
+	<div class="month">AUG</div>
+	<div class="date">9</div>
+	</div>
+	</td>
+	<td><span class="blue_a" >Deadline for submission of abstracts:</span><br/> 
+	August 9, 2019</td>
+	</tr>
+
+	<tr>
+	<td>
+	<div class="frame2">
+	<div class="month">SEP</div>
+	<div class="date">10</div>
+	</div>
+	</td>
+	<td><span class="blue_a" >Notification of acceptance:</span><br/>
+	September 10, 2019</td>
+	</tr>
+
+	<tr>
+	<td>
+	<div class="frame2">
+	<div class="month">OCT</div>
+	<div class="date">10</div>
+	</div>
+	</td>
+	<td><span class="blue_a" >Deadline for Early-bird Registration:</span><br/>October 10, 2019</td>
+	</tr>
+
+	<tr>
+	<td>
+	<div class="frame2">
+	<div class="month">DEC</div>
+	<div class="date">9-11</div>
+	</div>
+	</td>
+	<td><span class="blue_a" >2019ABC and 2019ISMBA:</span><br/> 
+	December 9-11, 2019</td>
+	</tr>
+
+	</tbody>
+	</table>
+	</div>
+</div>
+<div class="center">
+<div class="index_co_logos">
+  <table class="news_table">
+    <thead>
+<tr><th><span class="blue_a">Contact </span></th></tr></thead>
+<tbody>
+<tr>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td width="550px"><p>General Chair 
+	<br/>
+	<b>Prof. Jen Ming Yang </b><br/><br/>
+	Department of Chemical and Materials Engineeering, Chang Gung University <br/>
+	E-mail Address: jmyang@mail.cgu.edu.tw <br/><br/>
+
+	</p></td>
+      <td>
+		  <p><b>Secretary</b> <br/>
+		  Email: abcsymposium2019@gmail.com<br/>
+		  Website: <a href="http://www.2019abc-ismba.org/ ">http://www.2019abc-ismba.org/</a><br/>
+			Tel: +886-3-2118800 #5294<br/>
+		  Address: No.259, Wenhua 1st Rd., Guishan Dist., Taoyuan, Taiwan (R.O.C.)<br/> 
+		  
+		  </p>
+		</td>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+<div class="center">
+
+
+
+
+
+
+
+</div>
+
+
+<div class="clear"></div>
+
+<div class="footer">
+<div class="center">
+
+<table width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<p>
+Email: abcsymposium2019@gmail.com<br/>
+Tel: +886-3-2118800 #5294<br/>
+</td>
+<td valign="top" width="300px">
+<p>Copyright &copy; 2019ABC & 2019ISMBA</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/Templates/content.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>2017 ACRES</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="bookmark" href="favicon.ico"/>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+$(function(){
+	var $block = $('#abgne_fade_pic'), 
+		$ad = $block.find('.ad'),
+		showIndex = 0,			// 預設要先顯示那一張
+		fadeOutSpeed = 2000,	// 淡出的速度
+		fadeInSpeed = 2000,		// 淡入的速度
+		defaultZ = 10,			// 預設的 z-index
+		isHover = false,
+		timer, speed = 1000;	// 計時器及輪播切換的速度
+ 
+	// 先把其它圖片的變成透明
+	$ad.css({
+		opacity: 0,
+		zIndex: defaultZ - 1
+	}).eq(showIndex).css({
+		opacity: 1,
+		zIndex: defaultZ
+	});
+ 
+	// 組出右下的按鈕
+	var str = '';
+	for(var i=0;i<$ad.length;i++){
+		str += '<a href="#">' + (i + 1) + '</a>';
+	}
+	var $controlA = $('#abgne_fade_pic').append($('<div class="control">' + str + '</div>').css('zIndex', defaultZ + 1)).find('.control a');
+ 
+	// 當按鈕被點選時
+	// 若要變成滑鼠滑入來切換時, 可以把 click 換成 mouseover
+	$controlA.click(function(){
+		// 取得目前點擊的號碼
+		showIndex = $(this).text() * 1 - 1;
+ 
+		// 顯示相對應的區域並把其它區域變成透明
+		$ad.eq(showIndex).stop().fadeTo(fadeInSpeed, 1, function(){
+			if(!isHover){
+				// 啟動計時器
+				timer = setTimeout(autoClick, speed + fadeInSpeed);
+			}
+		}).css('zIndex', defaultZ).siblings('a').stop().fadeTo(fadeOutSpeed, 0).css('zIndex', defaultZ - 1);
+		// 讓 a 加上 .on
+		$(this).addClass('on').siblings().removeClass('on');
+ 
+		return false;
+	}).focus(function(){
+		$(this).blur();
+	}).eq(showIndex).addClass('on');
+ 
+	$ad.hover(function(){
+		isHover = true;
+		// 停止計時器
+		clearTimeout(timer);
+	}, function(){
+		isHover = false;
+		// 啟動計時器
+		timer = setTimeout(autoClick, speed);
+	})
+ 
+	// 自動點擊下一個
+	function autoClick(){
+		if(isHover) return;
+		showIndex = (showIndex + 1) % $controlA.length;
+		$controlA.eq(showIndex).click();
+	}
+ 
+	// 啟動計時器
+	timer = setTimeout(autoClick, speed);
+});
+
+})
+
+</script>
+
+<link rel="stylesheet" href="ajximagerotator.css" type="text/css" />
+<script src="ajximagerotator.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ajxmenu.css" type="text/css" />
+<script src="ajxmenu.js" type="text/javascript"></script>
+
+<body>
+
+
+
+
+<div class="main">
+<div class="header">
+
+</div>
+
+<div class="menu">
+	<div class="center">
+		<div class="AJXCSSMenuWeOfEYB"> <!-- AJXFILE:ajxmenu.css -->
+			<ul>
+			  <li class=""><a class="" href="index.html">Home</a></li>
+				<li class="tfirst tsub">
+					 <a class="ajxsub"  style="width:140px"  href="#">About Conference</a>
+					<ul class="sub-menu">
+					<li><a href="2019%20CSFBM.html" target="_top" >2019 CSFBM</a></li>
+					<li><a href="2019%20ISMBA.html" target="_top" >2019 ISMBA</a></li>
+					<li><a href="2019%20ABC.html" target="_top" >2019 ABC</a></li>
+					</ul>           
+				</li>
+			  <li class=""><a style="width:140px" class="" href="Program.html">Program</a></li>
+			  <li class=""><a style="width:140px" class="" href="Special%20Issue.html">Special Issue</a></li>
+			  <li class=""><a style="width:140px" class="" href="Registration.html">Registration</a></li>
+			  <li class=""><a style="width:140px" class="" href="Information.html">Information</a></li>
+			</ul>
+		 </div>
+	</div>
+</div>
+
+
+
+<div class="center">
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="center">
+
+<div class="welcome" style="min-height: 450px"><!-- InstanceBeginEditable name="EditRegion3" -->
+
+
+<div class="content_left">
+
+<h2 class="title">Registration > <span class="title_coffee">Local Participants</span></h2>
+<div class="blue_line"></div>
+
+<div class="title_second">Important Dates</div>
+<ol class="none">
+<li>Deadline for Early Bird Registration: <span class="underline">September 30, 2017</span></li>
+<li>Deadline for Online Registration: <span class="underline">November 10, 2017</span></li>
+<li>On-Site Registration: <span class="underline">November 24-26, 2017</span></li>
+
+</ol>
+
+
+<table class="fee">
+
+<thead>
+<tr>
+<th width="205">
+<strong>Category</strong>
+</th>
+<th width="170">
+<strong>Early Bird</strong><br/>
+<strong>September 30, 2017</strong>
+</th>
+<th width="173" >
+<strong>Regular</strong><br/>
+<strong>November 10, 2017</strong>
+</th>
+<th width="186" >
+<strong>On-Site</strong><br/>
+<strong>November 24-26, 2017</strong>
+</th>
+</tr>
+
+
+</thead>
+<tbody>
+
+<tr>
+<td>
+台灣機器人手術醫學會<br>
+(TRSA)會員 </td>
+<td >
+NTD 1,000
+</td>
+<td >
+NTD 2,000
+</td>
+<td >
+NTD 2,500
+</td>
+</tr>
+<tr>
+  <td>合辦學會會員</td>
+  <td >NTD 3,000 </td>
+  <td >NTD 4,000 </td>
+  <td >NTD 4,500 </td>
+</tr>
+<tr>
+  <td> 非會員</td>
+  <td > NTD 6,000 </td>
+  <td > NTD 9,000 </td>
+  <td > NTD 10,000 </td>
+</tr>
+<tr>
+  <td>住院醫師/護理人員/醫學生</td>
+  <td colspan="3" >Free</td>
+</tr>
+<tr>
+  <td>Gala Dinner</td>
+  <td colspan="3" >NTD 1,500</td>
+  </tr>
+</tbody>
+</table>
+<div class="title_second">Registration fee includes:</div>
+<p>1. Admission to scientific program &amp; Exhibition<br>
+  2. Congress Book /  Congress Bag<br>
+  3. Coffee Break &amp; Lunch<br>
+</p>
+<p><a href="http://www.twrsa.org.tw/member/join.asp" target="_blank"><strong>※加入台灣機器人手術醫學會(TRSA)會員 </strong></a></p>
+<p class="title_second"><a href="http://www.twrsa.org.tw/member/join.asp" target="_blank"><strong>※</strong></a>合辦學會列表</p>
+<ul>
+  <li> 台灣內視鏡外科醫學會</li>
+  <li> 台灣消化系外科醫學會</li>
+  <li> 台灣血管外科醫學會</li>
+  <li> 台灣胸腔及心臟血管外科醫學會</li>
+  <li> 台灣泌尿科醫學會</li>
+  <li> 台灣婦產科醫學會</li>
+  <li> 台灣婦產科內視鏡暨微創醫學會</li>
+  <li> 台灣耳鼻喉科醫學會</li>
+  <li> 中華民國大腸直腸外科醫學會</li>
+  <li> 台灣大腸直腸醫學會</li>
+  <li>台灣手術全期護理學會</li>
+  <li>台灣頭頸部腫瘤醫學會</li>
+</ul>
+</div>
+
+
+<div class="content_right">
+
+
+<iframe src="menu_registration.html" name="photo_menu" width="206" marginwidth="0" height="500" marginheight="0" scrolling="No" frameborder="0" id="in_menu"></iframe>
+
+</div>
+
+
+
+<!-- InstanceEndEditable -->
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+<div class="center">
+
+
+
+
+
+
+
+</div>
+
+
+<div class="clear"></div>
+
+<div class="footer">
+<div class="center">
+
+<table width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<p>
+Email: abcsymposium2019@gmail.com<br/>
+Tel: +886-3-2118800 #5294<br/>
+</td>
+<td valign="top" width="360px">
+<p>Copyright &copy; 2019 CSFBM & 2019 ISMBA & 2019 ABC</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

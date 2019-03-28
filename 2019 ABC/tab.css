@@ -1,0 +1,128 @@
+/* Android 2.3 :checked fix */
+
+
+
+@-webkit-keyframes fake {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fake {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.zh
+{      font-family: Microsoft JhengHei;
+font-size:15px;
+}
+
+.worko-tabs {
+ 
+  width: 740px;
+
+}
+.worko-tabs .state {
+  position: absolute;
+  left: -10000px;
+}
+.worko-tabs .flex-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+		  
+}
+.worko-tabs .flex-tabs .tab {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: 30px;
+  font-size:14px;
+  
+}
+
+
+
+.worko-tabs .flex-tabs .panel {
+  background-color: #fff;
+  padding: 20px 10px;
+  min-height: 300px;
+  display: none;
+  font-size:13px;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+		  width:740px;
+}
+
+.worko-tabs .flex-tabs .panel>p.picture
+{ 
+  text-align:center;}
+
+
+.worko-tabs .tab {
+  display: inline-block;
+  padding: 2px 0;
+  vertical-align: top;
+  cursor: hand;
+  cursor: pointer;
+  border-bottom: 6px solid #ccc;
+  
+}
+.worko-tabs .tab:hover {
+
+}
+
+#tab-one:checked ~ .tabs #tab-one-label,
+#tab-two:checked ~ .tabs #tab-two-label,
+#tab-three:checked ~ .tabs #tab-three-label,
+#tab-four:checked ~ .tabs #tab-four-label,
+#tab-five:checked ~ .tabs #tab-five-label{
+ 
+  color:#336699;
+  font-weight:bold;
+  cursor: default;
+  border-bottom-color:#336699;
+  font-size:14px;
+ 
+}
+
+#tab-one:checked ~ .tabs #tab-one-panel,
+#tab-two:checked ~ .tabs #tab-two-panel,
+#tab-three:checked ~ .tabs #tab-three-panel,
+#tab-four:checked ~ .tabs #tab-four-panel,
+#tab-five:checked ~ .tabs #tab-five-panel {
+  display:block;
+
+  
+}
+.text
+{ font-size:13px;
+  font-weight: normal;
+  color: #333;
+  font-family: Tahoma, Geneva, sans-serif;
+  line-height:18px;
+  text-align: justify;
+} 
+.text2
+{ font-size:13px;
+  font-weight: normal;
+  color:  #360;
+  font-family: Tahoma, Geneva, sans-serif;
+  line-height:18px
+} 
